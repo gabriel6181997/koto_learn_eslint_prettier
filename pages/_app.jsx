@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const [state] = useState();
-  useEffect(()=> {
-    if(state) return;
-  },[state]);
+  useEffect(() => {
+    if (state) return;
+  }, [state]);
 
   return <Component {...pageProps} />;
 }
