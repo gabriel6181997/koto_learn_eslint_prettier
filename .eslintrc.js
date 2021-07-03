@@ -4,16 +4,25 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["plugin:react/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+  ],
   parserOptions: {
     sourceType: "module",
   },
-  plugins:[],
+  plugins: [],
   rules: {
-    semi: ["error", "always"],
-    quotes: ["error", "double"],
     "no-undef": "error",
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
   },
 };
